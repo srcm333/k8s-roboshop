@@ -12,32 +12,32 @@ kind: Deployment
 metadata:
   name: catalogue
   namespace: roboshop
-  #labels related to deployment resources
+  # labels related to deployment resource
   labels:
     project: roboshop
     tier: backend
-    componenet: catalogue
+    component: catalogue
 spec:
   replicas: 1
   selector:
     matchLabels:
       project: roboshop
       tier: backend
-      componenet: catalogue
-# Pod definitions
+      component: catalogue
+  # Pod
   template:
     metadata:
       labels:
         project: roboshop
         tier: backend
-        componenet: catalogue
+        component: catalogue
     spec:
       containers:
       - name: catalogue
         image: joindevops/catalogue:4.0.0
         envFrom:
         - configMapRef:
-          name: catalogue
+            name: catalogue
 ---
 apiVersion: v1
 kind: Service
@@ -48,7 +48,7 @@ metadata:
   labels:
     project: roboshop
     tier: backend
-    componenet: catalogue
+    component: catalogue
 spec:
   # Service uses the below labels to select the pods
   selector:
