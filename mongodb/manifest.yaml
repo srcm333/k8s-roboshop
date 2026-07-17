@@ -7,21 +7,21 @@ metadata:
   labels:
     project: roboshop
     tier: db
-    componenet: mongodb
+    component: mongodb
 spec:
   replicas: 1
   selector:
     matchLabels:
       project: roboshop
       tier: db
-      componenet: mongodb
+      component: mongodb
 # Pod definitions
   template:
     metadata:
       labels:
         project: roboshop
         tier: db
-        componenet: mongodb
+        component: mongodb
     spec:
       containers:
       - name: mongodb
@@ -36,7 +36,7 @@ metadata:
   labels:
     project: roboshop
     tier: db
-    componenet: mongodb
+    component: mongodb
 spec:
   # Service uses the below labels to select the pods
   selector:
