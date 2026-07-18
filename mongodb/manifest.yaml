@@ -38,7 +38,7 @@ metadata:
     tier: db
     component: mongodb
 spec:
-  # Service uses the below labels to select the podsq
+  # Service uses the below labels to select the pods
   selector:
     project: roboshop
     tier: db
